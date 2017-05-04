@@ -2,6 +2,7 @@
 #define _HOOK_CY_H_
 
 #include <android/log.h>
+#include <stdio.h>
 #include <substrate.h>
 
 #define LOG_TAG "SUBhook"
@@ -12,5 +13,7 @@
 
 void cigi_hook(void *orig_fcn, void* new_fcn, void **orig_fcn_ptr);
 void* lookup_symbol(char* libraryName, char* symbolName);
+void * get_base_of_lib_from_maps(char *soname);
+void * get_base_of_lib_from_soinfo(char *soname);
 
 #endif

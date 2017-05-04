@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 #define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO, "targetApp1-native", __VA_ARGS__)
-int getAge(void)
+static int getAge(void)
 {
     LOGI("[i] Verbose - getAge located at %p\n", &getAge);
     return 21;
